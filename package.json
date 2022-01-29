@@ -1,0 +1,14 @@
+{
+  "name": "test-app",
+  "description": "Test marko app setup",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cd ./sandbox && yarn start",
+    "test": "cd ./sandbox && yarn test:dev"
+  },
+  "main": "src/index.marko",
+  "workspaces": [
+    "sandbox"
+  ]
+}

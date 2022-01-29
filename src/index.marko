@@ -1,0 +1,18 @@
+
+class {
+  onCreate({ Declare }){
+    Declare( this )
+    this.state = { count: 0 }
+  }
+  onIncrement(){ 
+    this.state.count++
+    this.App.emit('increase', this.state.count )
+  }
+}
+
+<div#sample style="padding:15%;">
+  <Number value=state.count/>
+  <button.btn.btn-secondary on-click('onIncrement')>
+    <Locale text="Count"/>
+  </button>
+</div>
