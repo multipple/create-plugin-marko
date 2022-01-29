@@ -6,7 +6,7 @@
   "description": "Sample micro-application",
   "version": "1.0",
   "favicon": "favicon.png",
-  "categories": ["note"],
+  "categories": ["test"],
   "runscript": {
     "*": {
       "workspace": "qs",
@@ -14,12 +14,8 @@
     }
   },
   "resource": {
-    "dependencies": [
-      "plugin:multipple.accessibility~1.0"
-    ],
-    "permissions": {
-      "scope": [{ "type": "user.*", "access": "GRANTED" }, { "type": "tenant.*", "access": "GRANTED" }]
-    },
+    "dependencies": [],
+    "permissions": {},
     "services": {}
   },
   "author": {
