@@ -11,7 +11,7 @@
   "workspaces": [
     "sandbox"
   ],
-	"dependencies": {
-		"marko": "4.24.0"
-	}
+  "dependencies": {
+    "marko": "4.24.0"
+  }
 }
