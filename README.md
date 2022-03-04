@@ -1,2 +1,2 @@
-# create-app-marko
-Sample of Multipple's application project using marko.js
+# create-plugin-marko
+Sample of Multipple's plugin project using marko.js

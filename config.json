@@ -1,9 +1,9 @@
 {
-  "type": "application",
-  "name": "SampleApp",
+  "type": "plugin",
+  "name": "SamplePlugin",
   "namespace": "multipple",
-  "nsi": "sample-app",
-  "description": "Sample micro-application",
+  "nsi": "sample-plugin",
+  "description": "Sample plugin",
   "version": "1.0",
   "favicon": "favicon.png",
   "categories": ["test"],

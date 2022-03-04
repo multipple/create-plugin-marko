@@ -1,6 +1,6 @@
 {
-  "name": "test-app",
-  "description": "Test marko app setup",
+  "name": "test-plugin",
+  "description": "Test marko plugin setup",
   "version": "1.0.0",
   "private": true,
   "scripts": {
