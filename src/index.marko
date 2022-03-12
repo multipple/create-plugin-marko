@@ -6,7 +6,7 @@ class {
   }
   onIncrement(){ 
     this.state.count++
-    this.App.emit('increase', this.state.count )
+    this.Plugin.emit('increase', this.state.count )
   }
 }
 
