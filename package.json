@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "cd ./sandbox && yarn start",
-    "test": "cd ./sandbox && yarn test:dev"
-  },
+		"start": "cd ./.sandbox && yarn start",
+		"test": "cd ./.sandbox && yarn test:dev"
+	},
   "main": "src/index.marko",
   "workspaces": [
-    "sandbox"
+    ".sandbox"
   ],
   "dependencies": {
     "marko": "4.24.0"

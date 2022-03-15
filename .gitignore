@@ -1,6 +1,4 @@
-
 node_modules
-sandbox
-build
+.sandbox
 *.log
 yarn.lock
