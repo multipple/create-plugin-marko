@@ -9,8 +9,9 @@
 		"test": "@npm/lib:multipple:marko.unit-test~1.0.0"
 	},
 	"emulator": {
+		"os": "Multipple",
 		"model": "EIS8",
-		"version": "1.0.0",
+		"version": "1.0",
 		"env": {
 			"NODE_ENV": "development",
 			"HOST": "localhost",
