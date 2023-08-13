@@ -1,24 +1,36 @@
 
-class { onCreate(){ this.state = { locale: '', text: '' } } }
+class { 
+	onCreate(){ this.state = { locale: '', text: '' } }
+	onMount(){
+		// Pipe to context component in <Extension/>
+		// TODO: Better implementation to track ___context in production build
+		const context = (this.___context || this._i_ || [])[1]
+		if( !context ) return
 
-$ component.once( 'mount', () => {
-	// Pipe to context component in <Extension/>
-	const 
-	context = component.___context[1],
-	translate = () => {
-		const originalText = input.text || ( typeof input.renderBody == 'function' ? input.renderBody(out) : '' )
-		component.setState({
-			locale: context.data.locale,
-			text: context.data.RenderLocale( originalText )
-		})
+		const translate = () => {
+			const originalText = this.input.value || (typeof this.input.renderBody == 'function' ? this.innerBody() : '')
+			this.setState({
+				locale: context.data.locale,
+				text: context.data.RenderLocale( originalText )
+			})
+		}
+		
+		// Put value into initial language translation
+		translate()
+		// Re-apply translation to value
+		context.on('update', translate )
 	}
-	
-	context.on( 'update', translate )
-	translate()
-})
+	innerBody(){
+		return this.input
+								.renderBody
+								.toString()
+								.replace( new RegExp('(function)?(\\(\\w+\\)|(\\w+\\s*=>\\s*))\\s*\\{\\s*\\w+.t\\\("'), '')
+								.replace( new RegExp('"(,\\s*\\w+)?\\);?\\s*\\}'), '')
+	}
+}
 
 <span data-lang=state.locale
 			class=input.class
-			style="color:inherit">
+			style=`color:inherit;${input.style}`>
 	${state.text}
 </span>
